@@ -1,6 +1,6 @@
 ### Description
 
-This repository is used to demonstate the card.json structure used for the CARD database data.
+This repository is used to demonstrate the card.json structure used for the CARD database data.
 
 ### Download the card.json from CARD website
 
