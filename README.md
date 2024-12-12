@@ -31,10 +31,16 @@ conda deactivate
 ```
 cat card.json | jq . > card-formatted.json
 ```
-### get a model using only the model_id
+### get a model using only the model_id, e.g NDM-1 model
 
 ```
 jq '."783"' card-formatted.json > model-783.json
+```
+
+### get a model using only the model_id, e.g Mycobacterium tuberculosis intrinsic murA conferring resistance to fosfomycin model
+
+```
+jq '."2290"' card-formatted.json > model-2290.json
 ```
 
 ### see output
