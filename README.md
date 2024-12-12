@@ -14,7 +14,7 @@ wget https://card.mcmaster.ca/latest/data && tar xvf data card.json && rm data
 mamba create -c conda-forge -c bioconda -n card-json conda jq
 ```
 
-### activate the environment
+### Activate the environment
 
 ```
 conda activate card-json
@@ -26,30 +26,30 @@ conda activate card-json
 conda deactivate
 ```
 
-### format card.json using jq
+### Format card.json using jq
 
 ```
 cat card.json | jq . > card-formatted.json
 ```
-### get a model using only the model_id, e.g NDM-1 model
+### Get a model using only the model_id, e.g NDM-1 model
 
 ```
 jq '."783"' card-formatted.json > model-783.json
 ```
 
-### get a model using only the model_id, e.g Mycobacterium tuberculosis intrinsic murA conferring resistance to fosfomycin model
+### Get a model using only the model_id, e.g Mycobacterium tuberculosis intrinsic murA conferring resistance to fosfomycin model
 
 ```
 jq '."2290"' card-formatted.json > model-2290.json
 ```
 
-### see output
+### See output
 
 ```
 cat model-783.json
 ```
 
-### grab using key and values
+### Select using key and values
 
 ```
 cat model-783.json | jq '.ARO_category | to_entries[] | select(.value.category_aro_class_name == "Antibiotic")'
